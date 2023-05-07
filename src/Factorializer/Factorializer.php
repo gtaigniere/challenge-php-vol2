@@ -23,6 +23,29 @@ class Factorializer
      */
     public function factorialize(int $n): int
     {
-        return $n;
+        if ($n < 0) {
+            throw new InvalidArgumentException(self::MSG_NB_NEGATIF);
+        }
+        if ($n == 0) {
+            return 1;
+        }
+        $result = $n;
+        for ($i = $n - 1; $i > 0; $i--) {
+            $result *= $i;
+        }
+        return $result;
+    }
+
+    // Même fonction avec la récursivité
+    public function factorialize(int $n): int
+    {
+        if ($n < 0) {
+            throw new InvalidArgumentException(self::MSG_NB_NEGATIF);
+        }
+        if ($n == 0) {
+            return 1;
+        } else {
+            return $n * factorialize($n - 1);
+        }
     }
 }

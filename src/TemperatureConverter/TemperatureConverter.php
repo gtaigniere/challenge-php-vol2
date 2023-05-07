@@ -13,6 +13,6 @@ class TemperatureConverter
      */
     public function toFahrenheit(float $celsius): float
     {
-        return $celsius;
+        return $celsius * 9 / 5 + 32;
     }
 }

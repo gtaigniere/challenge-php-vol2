@@ -4,6 +4,8 @@
 namespace Steamroller;
 
 
+use phpDocumentor\Reflection\Types\Array_;
+
 class Steamroller
 {
     /**
@@ -13,7 +15,14 @@ class Steamroller
      * @param array $arr
      * @return array
      */
+    // Pas encore opérationnel
     public function steamrollArray(array $arr) {
-        return $arr;
+        $result = array();
+        for ($row = 0; $row < count($arr); $row++) {
+            for ($col = 0; $col < count($arr[$row]); $col++) {
+                array_push($result, $arr[$row][$col]);
+            }
+        }
+        return $result;
     }
 }

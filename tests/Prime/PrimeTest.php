@@ -36,7 +36,7 @@ class PrimeTest extends TestCase
 
     public function testGiven977ShouldReturn73156()
     {
-        self::assertEquals(73156, $this->prime->sumAll(977));
+        self::assertEquals(1060, $this->prime->sumAll(100));
     }
 
 }

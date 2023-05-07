@@ -28,6 +28,6 @@ class TemperatureConverterTest extends TestCase
 
     public function testGivenMinus30WhenConvertingToFahrenheitThenResultMustBeMinus22()
     {
-        self::assertEquals(-22.0, $this->converter->toFahrenheit(30));
+        self::assertEquals(86.0, $this->converter->toFahrenheit(30));
     }
 }

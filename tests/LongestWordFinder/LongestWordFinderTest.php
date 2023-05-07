@@ -18,7 +18,7 @@ class LongestWordFinderTest extends TestCase
 
     public function testGivenEmptyShouldReturn0()
     {
-        self::assertEquals(19, $this->finder->find('What if we try a super-long word such as otorhinolaryngology'));
+        self::assertEquals(0, $this->finder->find(''));
     }
 
     public function testGivenThe_quick_brown_fox_jumped_over_the_lazy_dogShouldReturn6()
